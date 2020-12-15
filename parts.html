@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>EasyDrive - Parts and Maintence</title>
+  <!-- Bootstrap CSS local file -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/parts.css">
+</head>
+
+<body class="bg-dark">
+    <div class="row">
+        <div class="col">
+            <header class="masthead">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12 text-center">
+                            <h1 class="text-light">How do I care for my vehicle?</h1>
+                            <p class="lead text-light">Now that you know the right vehicle for you, keep it running with these easy tips located below!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </header>
+    </div>
+    <div class="row justify-content-center pt-3 px-3">
+        <p class="text-center text-white">Click on any of the headings below to learn more about the parts of a car and how to maintain them.</p>
+    </div>
+    <div class="row row-sm-12 pt-3 px-3">
+        <div  class="col col-lg-3 col-md-12 col-sm-12 col-xs-12 text-center">
+            <p data-toggle="collapse" data-target="#engine" class="text-white display-4">Engine</p>
+            <div id="engine" class="collapse in">
+                <!-- Public Domain Image from: https://unsplash.com/photos/MWaWwd7VxDQ -->
+                <img src="images/push_to_start.jpg" width="300" height="300" class="pt-1 pb-1" onclick="audioPlay('engine');">
+                <p class="text-white" alt="Public domain image of cylinder and piston.">The ignition of fuel causes the piston in the cylinder to move up and down. The tollerances of the cylinder walls are very tight as to keep oil from burning but to also lubricate the cylinder. Clean and correct engine oil keeps the cylinder walls from scoring from debris and prevents the engine from bruning oil. <b>Click the button to start the engine!</b></p>
+            </div>
+        </div>
+        <div class="col col-lg-3 col-md-12 col-sm-12 col-xs-12 text-center">
+            <p data-toggle="collapse" data-target="#turbo" class="text-white display-4">Turbo</p>
+            <div id="turbo" class="collapse in">
+                <!-- Purchased image from: https://www.shutterstock.com/image-vector/isolated-monochrome-illustration-car-turbocharger-on-599463665 -->
+                <img src="images/licensed_turbo.png" width="300" height="300" class="pt-1 pb-1" id="turboimg">
+                <p class="text-white">Often called <i>spinny bois</i> by the car community. Turbos are a method of forced induction that takes the flowing exhaust to drive a turbine to bring fresh air into the combustion chamber (cylinder). Most performance cars have these and are generally lubricated by engine oil. Clean engine oil keeps the bearings working like new.</p>
+            </div>
+        </div>
+        <div class="col col-lg-3 col-md-12 col-sm-12 col-xs-12 text-center">
+            <p data-toggle="collapse" data-target="#coolant" class="text-white display-4">Coolant System</p>
+            <div id="coolant" class="collapse in">
+                <!-- Purchased image from: https://www.shutterstock.com/image-photo/auto-mechanic-filling-premixed-super-long-1815995552 -->
+                <img src="images/licensed_coolant.jpg" width="300" height="300" class="pt-1 pb-1" onclick="audioPlay('coolant');">
+                <p class="text-white">Engines get hot and need to be cooled or else they would melt the engine block. Coolant runs through the car's engine though specially machined caverns. While most cars have a closed coolant system, it's important to check your coolant during large temperature changes as some can be burned or evaporate. Not all coolants are created equal so refer to your cars manual for information about your coolant type. <b>Click on the image above to hear when a car is overheating!</b></p>
+            </div>
+        </div>
+        <div class="col col-lg-3 col-md-12 col-sm-12 col-xs-12 text-center">
+            <p data-toggle="collapse" data-target="#brakes" class="text-white display-4">Brakes</p>
+            <div id="brakes" class="collapse in">
+                <!-- Purchased image from: https://www.shutterstock.com/image-illustration/brake-disc-red-sport-racing-calliper-447424972 -->
+                <img src="images/licensed_brakes.jpg" width="300" height="300" class="pt-1 pb-1">
+                <p class="text-white">Keeping an eye and ear on your brakepads is a great way to know when its time to change them. Most brakes will begin to squel when reaching the end of their lifespan. It's also a good idea to change brakefluid because it is <i>hydroscopic</i> which means it absorbs water. Water in brake lines decreases braking performance.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row row-sm-12 pt-3 px-3 mx-auto">
+        <div class="col col-lg-3 col-md-12 col-sm-12 col-xs-12 text-center">
+            <p data-toggle="collapse" data-target="#tires" class="text-white display-4">Tires</p>
+            <div id="tires" class="collapse in">
+                <!-- Purchased image from: https://www.shutterstock.com/image-photo/wheel-car-tire-aluminum-wheels-isolated-616605092 -->
+                <img src="images/licensed_tire.jpg" width="300" height="300" class="pt-1 pb-1">
+                <p class="text-white">Tires are one of the most important parts of ride comfort and the part of the car that touches the ground. Checking the tire tread is a good way to ensure safe driving conditions. Use a penny and place the penny heads out toward you. If Loncoln's head is covered by the tread you have about 2/3 tread life remaing. Check for tire rot or cracking and if found replace the tire. </p>
+            </div>
+        </div>
+        <div class="col col-lg-3 col-md-12 col-sm-12 col-xs-12 text-center">
+            <p data-toggle="collapse" data-target="#cabin" class="text-white display-4">Cabin</p>
+            <div id="cabin" class="collapse in">
+                 <!-- Purchased image from: https://www.shutterstock.com/image-photo/replacing-dirty-cabin-pollen-air-filter-1268151676 -->
+                 <img src="images/licensed_cabin_filter.jpg" width="300" height="300" class="pt-1 pb-1">
+                <p class="text-white">Have you ever changed your cabin air filter? Did you even know you had one? Dust and pollen can build up leaving the filter clogged and smelly. Change it every year for your health and the interior comfort of the car. Using automotive grade cleaning wipes around common touch areas like the gear selector and steering wheel help keep the plastics from becoming brittle from the oils in our skin.</p>
+            </div>
+        </div>
+        <div class="col col-lg-3 col-md-12 col-sm-12 col-xs-12 text-center">
+            <p data-toggle="collapse" data-target="#transmission" class="text-white display-4">Transmission</p>
+            <div id="transmission" class="collapse in">
+                <!-- Purchased image from: https://www.shutterstock.com/image-photo/automatic-transmission-truck-section-720456715 -->
+                <img src="images/licensed_transmission.jpg" width="300" height="300" class="pt-1 pb-1">
+                <p class="text-white">The transmission is what puts power from the motor to the wheels. Transmissions are composed of many gears and sometimes more then one clutch. Othertimes they are composed of no gears but instead a chain. One thing almost all transmissions need is oil. Transmissions use a special blend of synthetic oil with additives to keep wear on gears, chains, and clutches to a minimum. While no transmission lasts forever, driving style and frequency of transmission fluid changes can help your car have a long life.</p>
+            </div>
+        </div>
+        <div class="col col-lg-3 col-md-12 col-sm-12 col-xs-12 text-center">
+            <p data-toggle="collapse" data-target="#lights" class="text-white display-4">Lights</p>
+            <div id="lights" class="collapse in">
+                 <!-- Purchased image from: https://www.shutterstock.com/image-photo/beautiful-white-car-headlights-322507736 -->
+                <img id="carLights" src="images/licensed_light_off.jpg" width="300" height="300" class="pt-1 pb-1" onclick="carLights();">
+                <p class="text-white">Lights are an important aspect of night driving. Changing and checking them on most cars is very simple. Find a dark place and park the car. Turn on the lights and walk around the car to see if any are not functioning. If one seems to be out, you can usually obtain a new lightbulb at a local auto parts store. Do not change a bulb until the car has had atleast two hours to cool down and never touch a bulb with bare skin. Oils from the skin ruin the life of the glass on the bulb. <b>Click on the car to turn the lights on!</b></p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-12 text-center pt-2 pb-3">
+            <a href="michael_score.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Click Here to See How Other Cars Compare</a>
+        </div>
+        <div class="col col-12 text-center text-white pt-2 pb-3">
+            <p class="text-center">All images used in this page have been purchased from <i>Shutterstock.com</i> Except for the header image and "push to start image" which can be found <a href="https://unsplash.com/photos/MWaWwd7VxDQ">Here</a> and <a href="https://unsplash.com/photos/MWaWwd7VxDQ">here.</a> All sounds are from <i>freesound.org</i> and licensed under Creative Commons.</p>
+        </div>
+        
+    </div>
+
+
+
+
+    <!-- Scripts -->
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/parts.js"></script>
+    <!-- Scripts -->
+
+
+</body>
+</html>

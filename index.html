@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to EasyDrive</title>
+  <!-- Bootstrap CSS local file -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="bg-dark text-white">
+    <!-- Code from https://startbootstrap.com/snippets/video-header -->
+    <header>
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+          <source src="video/mp4_driving.mp4" type="video/mp4">
+            <source src="video/webm_driving.webm" type="video/webm">
+        </video>
+        <div class="container h-100">
+          <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white">
+              <h1 class="display-3">Welcome to EasyDrive</h1>
+              <p class="lead mb-0">The perfect app to find your next car</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+  <!-- Start Container -->
+  <div class="container">
+    <div class="row">
+        <div class="col col-md-6 page-header pt-5">
+            <h1 class="text-center">What is EasyDrive?</h1>
+        </div>
+        <div class="col col-md-6 page-header pt-5 mx-auto">
+            <p class="text-center">EasyDrive is an app created by Michael Owens that helps users pick between the lastest model cars with their needs in mind. Answer the below questions and find out what car is right for you.</p>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-dark">1.) Answer Questions</li>
+                <li class="list-group-item list-group-item-dark">2.) Get Car Reccomendations</li>
+                <li class="list-group-item list-group-item-dark">3.) Learn About Basic Maintence</li>
+                <li class="list-group-item list-group-item-dark">4.) Find Out Where Your Reccomendations Stand on the "Michael Score"</li>
+                <li class="list-group-item list-group-item-dark">4.) Learn Something!</li>
+            </ul>
+            <p class="mb-0">
+                Creatyed by <a href="https://github.com/imichaelowens/">Michael Owens - check me out on GitHub</a>
+              </p>
+        </div>
+      </div><!-- End Row -->
+
+    <div class="row justify-content-center" id="qIntro">
+        <div class="col-8 pt-5">
+            <h2 class="text-center">Questions</h2>
+            <p class="text-center">Follow the instructions below and answer the questions to find out what car is the right one for you.</p>
+        </div>
+    
+    </div><!--End Row-->
+    
+    <div class="row">
+        <div class="col col-sm-12 pb-5">
+            <form id="carsForm" class="border border-white text-center" action="js/dataProcess.js" method="post"><!--Begin Form-->
+                <div class="row">
+                    <div class="input-group">
+                        <div class="col col-6 pt-3 mx-auto">
+                             <label for="qBudget">What is your budget?</label>
+                                <div class="col">
+                                    <input type="radio" name="qBudget" value="A" checked>15-20k</label>
+                                </div>
+                                <div class="col">
+                                    <input type="radio" name="qBudget" value="C">20k-35k</label>
+                                </div>
+                                <div class="col">
+                                    <input type="radio" name="qBudget" value="B">20k-40k</label>
+                                </div>
+                                <div class="col">
+                                    <input type="radio" name="qBudget" value="D">28-50k+</label>
+                                </div>
+                        </div>
+                        <div class="col col-6 pt-3 mx-auto">
+                            <label for="qInterest">What kind of car lifestyle are you interested in?</label>
+                            <div class="col">
+                                <input type="radio" name="qInterest" value="economy" checked>Economy</label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" name="qInterest" value="midsize">Midsize Sedans</label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" name="qInterest" value="fullsize">Fullsize Sedans</label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" name="qInterest" value="spots">Sports/Touring Cars</label>
+                            </div>
+                       </div>
+                        <div class="col col-6 pt-3 mx-auto">
+                            <label for="cars">How many doors do you need?</label>
+                            <select name="doors" id="doors">
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="col col-6 col-sm-12 pb-3 pt-3 mx-auto">
+                            <label for="milesDriven">Expected Miles Driven</label>
+                            <input type="number" min="0" id="milesDriven" name="milesDriven">
+                        </div>
+                        <div class="col col-12 pb-1">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            </form><!-- End Form -->
+        </div><!-- End Column -->
+    </div><!-- End Row -->
+    
+    <div class="row">
+        <div class="col col-lg-6 col-sm-12 mx-auto d-none" id="economyPref">
+
+        </div>
+        <div class="col col-lg-6 col-sm-12 mx-auto d-none" id="economyPrice">
+
+        </div>
+        <div class="col col-lg-6 col-sm-12 mx-auto d-none" id="fullsizePref">
+
+        </div>
+        <div class="col col-lg-6 col-sm-12 mx-auto d-none" id="fullsizePrice">
+
+        </div>
+        <div class="col col-lg-6 col-sm-12 mx-auto d-none" id="midsizePref">
+
+        </div>
+        <div class="col col-lg-6 col-sm-12 mx-auto d-none" id="midsizePrice">
+
+        </div>
+        <div class="col col-lg-6 col-sm-12 mx-auto d-none" id="sportsPref">
+
+        </div>
+        <div class="col col-lg-6 col-sm-12 mx-auto d-none" id="sportsPrice">
+
+        </div>
+        <div class="col col-12 text-center pt-2 pb-3 d-none" id="learnMore">
+            <p class="text-danger text-center d-none" id="gasNotification"></p>
+            <p class="text-white text-center">Now that you know what options you have click below to learn more about how to maintain your car!</p>
+            <a href="parts.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Click Here To Learn More</a>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col">
+            <p class="text-center"><i>Video purchase license #5227512<a href="https://www.pond5.com/stock-footage/item/25332675-driving-black-car-pov-right-side-reference-country-road"> for asset 25332675 from Pond5.</a></i></p>
+        </div>
+    </div>
+  </div>
+  <!-- end container -->
+
+
+
+<!-- Scripts -->
+  <script src="js/jquery.slim.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/dataProcess.js"></script>
+    <!-- Charts -->
+        <!-- Begin HighCharts CDN-->
+            <script src="https://code.highcharts.com/highcharts.js"></script>
+            <!-- Chart Theme -->
+            <script src="https://code.highcharts.com/themes/sand-signika.js"></script>
+            <!-- Add Grid For Easier Reading -->
+            <script src="https://code.highcharts.com/themes/grid.js"></script>
+            <!-- Export Controls -->
+            <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <!--END HighCharts CDN -->
+
+        <!-- Economy -->
+            <script src="js/economy/economy_perf_compare.js"></script>
+            <script src="js/economy/economy_price_compare.js"></script>
+        <!-- Midsize -->
+            <script src="js/midsize/midsize_perf_compare.js"></script>
+            <script src="js/midsize/midsize_price_compare.js"></script>
+        <!-- Fullsize -->
+            <script src="js/fullsize/fullsize_perf_compare.js"></script>
+            <script src="js/fullsize/fullsize_price_compare.js"></script>
+        <!-- Sports/Touring -->
+            <script src="js/sportstouring/sportstouring_perf_compare.js"></script>
+            <script src="js/sportstouring/sportstouring_price_compare.js"></script>
+<!-- End Scripts -->
+
+</body>
+</html>
